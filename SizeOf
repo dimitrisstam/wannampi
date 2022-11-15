@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+ int a;
+ char b;
+ float c;
+ printf("A.Integer:\n");
+ printf("B.Character:\n");
+ printf("C.Real Number:\n");
+ printf("Enter Variables A,B,C:");
+ scanf("%d %c %f",&a,&b,&c);
+ sizeof(a,b,c);
+ printf("Size of integer is:%d\n",sizeof(a));
+ printf("Size of character is:%c\n",sizeof(b));
+ printf("Size of real number is:%f\n",sizeof(c));
+ return 0;
+}
