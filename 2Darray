@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+int main()
+{
+	char name[3][20]={"Antonis","Nikos","Dimitris"};
+	printf("%s",name[0]);
+	printf("%s",name[1]);
+	printf("%s",name[2]);
+return 0;	
+}
