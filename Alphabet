@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+	char a='a';
+	char z='z';
+	char c;
+	printf("Enter a character:\n");
+	scanf("%c",&c);
+	if(c>=a&&c<=z)
+	{
+	 printf("%c is in the Alphabet\n",c);
+	}else
+	{
+		printf("ERROR\n");
+	}  
+return 0;	
+}
