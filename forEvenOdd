@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+	int num[]={1,2,3,4,5,6,7};
+	int i;
+	for(i=0;i<7;i++)
+	{
+		if(num[i]%2==0)
+		{
+			printf("The number %d is even\n",num[i]);
+		}else
+		{
+			printf("The number %d is odd\n",num[i]);
+		}
+	}
+return 0;	
+}
