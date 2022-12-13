@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+	int n;
+	int num[n];
+	printf("How many numbers?\n");
+	scanf("%d",&n);
+	printf("Enter your numbers\n");
+	int i=0;
+	while(i<n)
+	{
+		scanf("%d",&num[i]);
+		++i;
+	}
+	int num2[n];
+	int ii=0;
+	while(ii<n)
+	{
+		num2[ii]=num[ii];
+		printf("%d",num2[ii]);
+		++ii;
+	}
+return 0;
+}
