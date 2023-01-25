@@ -16,7 +16,8 @@ int main()
 	}
 return 0;
   int i=0;
-  while (i<=5,
+  while (i<=5){
+}
 }
 	int convert(long long a) {
 			int dec=0, i=0,rem;
