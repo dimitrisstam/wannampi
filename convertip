@@ -11,8 +11,8 @@ int main()
 	scanf("%d",&choice);
 	if (choice==1){
 	 printf("Enter your ip address:\n");
-	 scanf("%lld.%lld.%lld", &a);
-	 printf("Binary to dec:%d\n", convert(a));
+	 scanf("%lld.%lld.%lld.%lld", &a);
+	 printf("Binary to dec:%lld.%lld.%lld.%lld", convert(a));
 	}
 return 0;
 }
