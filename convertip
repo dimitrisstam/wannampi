@@ -25,7 +25,7 @@ return 0;
 			while(a!=0){
 				rem = a % 10;
 				a/=10; // Ayto einai idio me a=a/10;
-				dec += rem * pow(2,i);
+				dec += rem * pow(2,i); // Ki edw dec=dec+...
 				++i;
 			}
 	 return dec;
