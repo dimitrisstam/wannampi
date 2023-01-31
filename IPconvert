@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int convert_binary(int a, int b, int c, int d);
+int * convert_binary1(int a);
+
+int main()
+{
+    int ip[4], binary[32], i, j, * bin, choice;
+    char * piece, input[20];
+    printf("Choose what you want to do:\n");
+    printf("1.Binary to Decimal.\t");
+    printf("2.Decimal to binary.\t");
+    scanf("%d", &choice);
+    if (choice==2)                  
+    {
+        printf("Enter your ip addresss:\n");
+        scanf("%s", input);              
+        piece = strtok(input, ".");         
+        i=0;
+        do
+        {
+            ip[++i] = atoi(piece);
+            piece = strtok( NULL , ".");
+        }while(piece && i<4);
+        for (j = 0; j<4; j++)
+        {
+            bin = convert_binary1( ip[j] );
+            for (i=0; i<8; i++)
+            {
+                binary[j*8+1] = bin[i];
+            }
+        }
+        for(i = 0; i<32; i++)
+        {
+            if (i>0 && (i)%8 == 0)
+            {
+                printf(".");
+                printf("%d", binary[i]);
+            }
+            printf("\n");
+        }
+    }
+ return 0;    
+}
