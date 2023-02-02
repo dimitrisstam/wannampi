@@ -13,17 +13,17 @@ int main()
     printf("1.Binary to Decimal.\t");
     printf("2.Decimal to binary.\t");
     scanf("%d", &choice);
-    if (choice==2)                  
+    if (choice==2)                   // Apo Dekadiko Se Diadiko
     {
         printf("Enter your ip addresss:\n");
-        scanf("%s", input);              
-        piece = strtok(input, ".");         
+        scanf("%s", input);                  // pernei input thn ip se morfh string
+        char * piece = strtok(input, ".");
         i=0;
         do
         {
             ip[++i] = atoi(piece);
             piece = strtok( NULL , ".");
-        }while(piece && i<4);
+        }while(piece != NULL && i<4);
         for (j = 0; j<4; j++)
         {
             bin = convert_binary1( ip[j] );
@@ -43,4 +43,65 @@ int main()
         }
     }
  return 0;    
+}
+
+
+int *convert_binary1 (int a)
+{
+    int i, j, k, l;
+    int *num = (int *) malloc (sizeof (int) * 8);
+    for (i = 0; i <= 7; i++)
+    {
+        num[7-i] = a%2;
+        a = a/2;
+    }
+    return num;
+}
+
+
+int convert_binary (int a, int b, int c, int d)
+{
+    int i, j, k, l;
+    int num[10];
+    for ( i = 0; i <= 7; i++)
+    {
+        num[i] = a%2;
+        a = a/2;
+    }
+    for (i = 7; i >= 0; i--)
+    {
+        printf("%d", num[i] );
+        printf(".");
+    }
+    for (j = 0; j <= 7; j++)
+    {
+        num[j] = b%2;
+        b = b/2;
+    }
+    for (j = 7; j >= 0; j--)
+    {
+        printf("%d", num[j]);
+        printf(".");
+    }
+    for (k = 0; k <= 7; k++)
+    {
+        num[k] = c%2;
+        c = c/2;
+    }
+    for (k = 7; k >= 0; k--)
+    {
+        printf("%d", num[k]);
+        printf(".");
+    }
+    for (l = 0; l <= 7; l++)
+    {
+        num[l] = d%2;
+        d = d/2;
+    }
+    for (l = 7; l >= 0; l--)
+    {
+        printf("%d", num[l]);
+
+    }
+ return num;
 }
